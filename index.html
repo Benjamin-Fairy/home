@@ -11,7 +11,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="static/css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/live2d/css/live2d.css" />
+    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
     <script type="text/javascript">
         if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
@@ -179,6 +180,12 @@
             </div>
         </footer>
     </div>
+    <!-- 看板娘 -->
+    <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -201,6 +208,16 @@
     <!-- 看板娘 -->
     <!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script-->
+    <script type="text/javascript">
+        var message_Path = '/live2d/'
+        var home_Path = 'https://temp.bejaminfairy.store/home/'  //此处修改为你的域名，必须带斜杠
+    </script>
+    <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="/live2d/js/message.js"></script>
+    <script type="text/javascript">
+        loadlive2d("live2d", "/live2d/model/tia/model.json");
+    </script>
+
 
     <!--鼠标点击效果-->
     <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
